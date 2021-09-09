@@ -2,7 +2,7 @@ import React from 'react'
 import Button1 from '../Atoms/Button1'
 import { FilterBy } from '@/components/Molecules'
 
-const HeaderHome = () => {
+export const HeaderHome = () => {
   return (
     <div className="flex justify-between items-center pt-20">
       <div>
@@ -16,5 +16,3 @@ const HeaderHome = () => {
     </div>
   )
 }
-
-export default HeaderHome

@@ -6,7 +6,7 @@ export interface Invoice {
   paymentTerms: number
   clientName: string
   clientEmail: string
-  status: string
+  status: 'paid' | 'pending' | 'draft'
   senderAddress: Address
   clientAddress: Address
   items: Item[]
@@ -25,4 +25,12 @@ export interface Item {
   quantity: number
   price: number
   total: number
+}
+
+export interface InvoiceItemT {
+  id: string
+  paymentDue: string
+  clientName: string
+  total: number
+  status: Invoice['status']
 }
